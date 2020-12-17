@@ -5,11 +5,9 @@
 				v-for="item in tabList"
 				:icon="item.icon"
 				:key="item"
+                :badge="item.badge"
 				>{{ item.label }}
 			</van-tabbar-item>
-			<!-- <van-tabbar-item icon="search">标签</van-tabbar-item>
-			<van-tabbar-item icon="friends-o">标签</van-tabbar-item>
-			<van-tabbar-item icon="setting-o">标签</van-tabbar-item> -->
 		</van-tabbar>
 	</div>
 	<router-view />
@@ -21,14 +19,18 @@ export default {
 		const tabList = ref([
 			{
 				label: '首页',
+				name: '',
 				icon: 'home-o',
 			},
 			{
 				label: '购物车',
-				icon: 'shopping-cart-o',
+				name: '',
+                icon: 'shopping-cart-o',
+                badge:"5"
 			},
 			{
 				label: '我的',
+				name: '',
 				icon: 'friends-o',
 			},
 		])
@@ -39,12 +41,4 @@ export default {
 </script>
 <style lang="scss" scoped>
 @import '@/assets/styles/hotcss/px2rem.scss';
-::v-deep .van-tabbar-item {
-	font-size: px2rem(24);
-	// line-height: 2;
-}
-::v-deep .van-tabbar {
-	height: px2rem(80);
-	padding: px2rem(5) 0;
-}
 </style>
