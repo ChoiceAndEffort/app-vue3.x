@@ -7,8 +7,20 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {},
+      "postcss-px2rem-exclude": {
+        "remUnit": 18,
+        "exclude": "/node_modules|floder_name/i"
+      }
+    }
+  },
   "dependencies": {
     "core-js": "^3.6.5",
+    "postcss-px2rem-exclude": "0.0.6",
+    "px2rem-loader": "^0.1.9",
+    "vant": "^3.0.0-rc.3",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0",
     "vuex": "^4.0.0-0"
