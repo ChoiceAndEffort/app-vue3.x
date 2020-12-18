@@ -1,8 +1,13 @@
 <template>
 	<div class="car">
-        <h2>购物车</h2>
-        <footer-taber :tabIndex="1"></footer-taber>
-    </div>
+		<van-nav-bar
+			title="购物车"
+			right-text="管理"
+			@click-right="onClickRight"
+		/>
+        
+		<footer-taber :tabIndex="1"></footer-taber>
+	</div>
 </template>
 
 <script lang="ts">
@@ -13,7 +18,10 @@ export default defineComponent({
 	components: {},
 	setup() {
 		const searchValue = ref('')
-		return { searchValue }
+		const onClickRight = () => {
+			console.log(555555555)
+		}
+		return { searchValue, onClickRight }
 	},
 })
 </script>

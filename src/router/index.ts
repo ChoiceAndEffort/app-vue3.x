@@ -16,10 +16,16 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import(/* webpackChunkName: "about" */ '../views/me/Index.vue')
   },
   {
+    path: '/person-settings',
+    name: 'personSettings',
+    component: () => import(/* webpackChunkName: "about" */ '../views/me/personSettings/Index.vue')
+  },
+  {
     path: '/car',
     name: 'car',
     component: () => import(/* webpackChunkName: "about" */ '../views/car/Index.vue')
-  }
+  },
+
 ]
 
 const router = createRouter({
