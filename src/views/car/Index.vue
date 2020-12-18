@@ -1,6 +1,7 @@
 <template>
 	<div class="car">
         <h2>购物车</h2>
+        <footer-taber :tabIndex="1"></footer-taber>
     </div>
 </template>
 

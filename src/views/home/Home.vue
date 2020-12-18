@@ -12,12 +12,12 @@
 			<van-swipe-item>3</van-swipe-item>
 			<van-swipe-item>4</van-swipe-item>
 		</van-swipe>
+		<footer-taber :tabIndex="0"></footer-taber>
 	</div>
 </template>
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
-
 export default defineComponent({
 	name: 'Home',
 	components: {},
